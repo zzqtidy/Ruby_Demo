@@ -10,3 +10,15 @@
 end
 
 [1,2,3,4,5].each{|e| puts "块的第二种调用方式：#{e}"}
+["Zhang San","Li Si","Wang Wu"].each_with_index{|obj,inx| puts "块的第二种调用方式：[#{inx},#{obj}]"}
+
+#Hash循环
+outcome={:参加费用=>1000,:挂件费用=>2000,:材料费用=>890}
+outcome.each{|key,value| puts "key=#{key},value=#{value}"}
+outcome.each{|p| puts "#{p[0]}=#{p[1]}"}
+
+#File文件读取数据
+
+file=File.open("../readme.txt")
+file.each_line{|line| puts "读取一行数据：#{line}"}
+file.close
