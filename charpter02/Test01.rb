@@ -12,6 +12,7 @@ name.each do |e|
 end
 name[0]="wang wu"
 puts puts "name[0] is #{name[0]}"
+
 #数组可以动态添加，不必指定长度
 name[2]="zhao liu"
 name.each do |e|
