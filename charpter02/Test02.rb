@@ -1,5 +1,6 @@
-#!usr/bin/ruby -w
+#!/usr/bin/ruby -w
 #_*_ coding:utf-8 _*_
+
 
 #第11章 块
 #块就是在调用方法的时候，能够与参数一起传递的多个处理的集合
@@ -21,5 +22,18 @@ outcome.each{|p| puts "#{p[0]}=#{p[1]}"}
 #File文件读取数据，each_line读取一行，另外还有each_char读取一个字符,each_byte读取一个字节。而其他对象中也有类似的each_xx的方法。
 
 file=File.open("../readme.txt")
-file.each_line{|line| puts "读取一行数据：#{line}"}
+file.each_line{|line| puts "第一种形式读取一行数据,此方式操作完毕要关闭文件：#{line}"}
 file.close
+
+
+file1=File.open("../readme.txt")
+file1.each_line do |line|
+	puts "第二种形式读取文件中一行,此方式操作完毕要关闭文件：#{line}"
+end
+file1.close
+
+# File.open("../readme.txt") do |file2|
+# 	file2.each_line do |line|
+# 		puts "第三种形式读取文件中一行,此方式操作完毕不需要关闭文件：#{line}"
+# 	end
+# end
