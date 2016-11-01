@@ -19,7 +19,6 @@ outcome.each{|key,value| puts "key=#{key},value=#{value}"}
 outcome.each{|p| puts "#{p[0]}=#{p[1]}"}
 
 #File文件读取数据，each_line读取一行，另外还有each_char读取一个字符,each_byte读取一个字节。而其他对象中也有类似的each_xx的方法。
-
 file=File.open("../readme.txt")
 file.each_line{|line| puts "读取一行数据：#{line}"}
 file.close
