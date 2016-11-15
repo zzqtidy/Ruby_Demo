@@ -65,3 +65,4 @@ puts "包含zhang?：#{str.include?("zhang")}"
 
 p "ABCDE".tr("B", "b") #=> "AbCDE"
 p "ABCDE".tr("A-E", "1-5") #=> "12345"
+
